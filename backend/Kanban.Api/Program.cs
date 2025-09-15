@@ -1,3 +1,6 @@
+using Kanban.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+//Add Services
+builder.Services.AddDbContext<KanbanDbContext>(options =>
+    options.UseInMemoryDatabase("KanbanDb"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
