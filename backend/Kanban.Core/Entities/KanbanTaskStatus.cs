@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kanban.Core.Entities
 {
-    public enum TaskStatus
+    public enum KanbanTaskStatus
     {
         ToDo,
         InProgress,

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Kanban.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace Kanban.Infrastructure.Data
     {
         public KanbanDbContext(DbContextOptions<KanbanDbContext> options) : base(options) { }
 
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<KanbanTask> Tasks { get; set; }
     }
 }
