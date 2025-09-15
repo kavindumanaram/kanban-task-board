@@ -1,3 +1,4 @@
+# .NET / Visual Studio
 bin/
 obj/
 *.exe
@@ -16,3 +17,22 @@ obj/
 *.bak
 *.ldf
 *.mdf
+
+# React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+/build
+/dist
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env Files
+.env
+.env.local
+.env.*.local
