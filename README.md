@@ -30,12 +30,17 @@ After starting the backend application, open the Swagger UI in your browser:
 👉 [Swagger UI] -> (https://localhost:{PORT}/swagger/index.html)
 
 > ⚠️ Note: The `{PORT}` may vary depending on your environment (e.g., 5000, 5001, 7010, etc.).  
-> Check the console output when you run `dotnet run` — it will display the actual URL.
+> Check the console output when you run `dotnet run` - it will display the actual URL.
 
 ## ⚙️ Frontend Setup (React.js)
 ```bash
 cd frontend
 npm install
+```
+> ⚠️ Note: Open the **.env** file and make sure the frontend **port** matches the backend Swagger port.
+If it’s different, update it accordingly.
+
+```bash
 npm start
 ```
 open in the browser
