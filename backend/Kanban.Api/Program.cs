@@ -18,13 +18,11 @@ builder.Services.AddMediatR(cfg =>
 // Add CORS policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
-        {
-            policy.WithOrigins()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowFrontend", p =>
+        p.SetIsOriginAllowed(_ => true)
+         .AllowAnyHeader()
+         .AllowAnyMethod()
+         .AllowCredentials());
 });
 
 // Add Controllers
