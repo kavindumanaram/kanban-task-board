@@ -1,7 +1,9 @@
-# Kanban Backend (ASP.NET Core 8 + CQRS + MediatR)
+# A simple **Full-Stack Kanban Board** built with:
 
-This is the backend API for the **Kanban Board** application.  
-It is built with **ASP.NET Core 8**, **CQRS with MediatR**, and **Entity Framework Core**.
+- **Backend:** .NET 8 + EF Core (InMemory DB)
+- **Frontend:** React
+- **Drag & Drop:** dnd-kit
+- **Architecture:** CQRS + Mediator (backend)
 
 ---
 
@@ -9,7 +11,9 @@ It is built with **ASP.NET Core 8**, **CQRS with MediatR**, and **Entity Framewo
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [NodeJS](https://nodejs.org/en)
 
+## ⚙️ Backend Setup (ASP.NET Core)
 ### Run the API
 ```bash
 cd backend
@@ -28,9 +32,16 @@ After starting the backend application, open the Swagger UI in your browser:
 > ⚠️ Note: The `{PORT}` may vary depending on your environment (e.g., 5000, 5001, 7010, etc.).  
 > Check the console output when you run `dotnet run` — it will display the actual URL.
 
-### Features Implemented
-
-- CRUD operations for tasks
+## ⚙️ Frontend Setup (React.js)
+```bash
+cd frontend
+npm install
+npm start
+```
+open in the browser
+```bash
+http://localhost:3000
+```
 - CQRS pattern with MediatR
 - Validation using Data Annotations
 - Swagger integration
