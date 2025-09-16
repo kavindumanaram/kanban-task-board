@@ -30,13 +30,6 @@ const TaskModal: React.FC<TaskModalProps> = ({
     >
       <h2>{title}</h2>
       {children}
-      <button
-        type="button"
-        onClick={onClose}
-        style={{ marginTop: "10px", background: "#eee" }}
-      >
-        Close
-      </button>
     </dialog>
   );
 };

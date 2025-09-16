@@ -61,6 +61,7 @@ const KanbanBoard: React.FC<Props> = ({ tasks, setTasks }) => {
                 description,
                 status: editingTask.status,
               });
+              console.log(editingTask.status);
               setTasks((prev) =>
                 prev.map((t) => (t.id === updated.id ? updated : t))
               );
