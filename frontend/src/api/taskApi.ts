@@ -10,20 +10,22 @@ export const getAllTasks = async (): Promise<KanbanTask[]> => {
 
 export const createTasks = async (
   task: Partial<KanbanTask>
-): Promise<KanbanTask[]> => {
-  const res = await axios.put(`${API_URL}`);
+): Promise<KanbanTask> => {
+  const res = await axios.post<KanbanTask>(`${API_URL}`, task, {
+    headers: { "Content-Type": "application/json" },
+  });
   return res.data;
 };
 
 export const updateTasks = async (
   id: number,
-  task: Partial<KanbanTask>
-): Promise<KanbanTask[]> => {
-  const res = await axios.put(`${API_URL}/${id}`);
+  updates: Partial<KanbanTask>
+): Promise<KanbanTask> => {
+  const res = await axios.put<KanbanTask>(`${API_URL}/${id}`, updates, {
+    headers: { "Content-Type": "application/json" },
+  });
   return res.data;
 };
-
-export const deleteTasks = async (id: number): Promise<KanbanTask[]> => {
+export const deleteTasks = async (id: number): Promise<void> => {
   const res = await axios.delete(`${API_URL}/${id}`);
-  return res.data;
 };
